@@ -38,6 +38,7 @@ const showProducts = (products) => {
   }
 }
 
+/* cart count function */
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -46,7 +47,7 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
   updateTotal()
 };
-
+/*  get value from input */
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
