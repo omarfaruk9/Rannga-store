@@ -16,19 +16,19 @@ const showProducts = (products) => {
     const countPeople = product.rating.count;
     // console.log(countPeople);
     const peopleCount = product.rating.rate;
+    
     const div = document.createElement("div");
     div.classList.add("prducts");
     div.innerHTML = `
       <div class="single-product">
         <div>
-          <img class="product-image my-3" src=${image}></img>
+          <img class=" img-fluid w-25 mx-auto my-3" src=${image}></img>
         </div>
           <h5>${product.title}</h5>
           <p class="m-0"><strong>Category:</strong> ${product.category}</p>
           <p class="m-0"><strong>Customer Review:</strong> ${countPeople}</i></p>
-          <p class="m-0"><strong>Rating:</strong> ${peopleCount}
-          <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"><i class="fas fa-star-half-alt"></i>
-          </i></p>
+          <p class="m-0"><strong>Rating:</strong> ${peopleCount } <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </p>
           <h4>Price: $ ${product.price}</h4>
           <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
           <button id="details-btn" class="btn btn-danger">Details</button>
